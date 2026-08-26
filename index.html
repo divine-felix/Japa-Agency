@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBFCFE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070707" media="(prefers-color-scheme: dark)">
+
+<title>Japa Agency — Study, Live and Work Abroad</title>
+<meta name="description" content="Japa Agency helps Nigerians study, live and work abroad. School admissions, student and work visas, accommodation, flights, proof of funds and arrival support — handled end to end.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Japa Agency — Study, Live and Work Abroad">
+<meta property="og:description" content="Admissions, visas, accommodation and flights. One team, from your first consultation to your first week abroad.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Ccircle cx='11' cy='17' r='7.2' fill='none' stroke='%231257F0' stroke-width='1.6' opacity='.4'/%3E%3Cpath d='M4.6 20.4C9 9.6 16.2 4.8 24.4 5.2' fill='none' stroke='%231257F0' stroke-width='1.8' stroke-linecap='round'/%3E%3Ccircle cx='24.4' cy='5.2' r='2.6' fill='%231257F0'/%3E%3C/svg%3E">
+
+<!-- Set the theme before first paint so the page never flashes the wrong one. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('japa-theme');
+      var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', saved || prefers);
+    } catch (e) { /* private mode — fall through to the light default */ }
+  })();
+</script>
+</head>
+
+<body>
+
+<!-- ==========================================================================
+     ICON SPRITE
+     Every icon on the page is one of these: a 16px, 1.5px-stroke glyph on
+     currentColor. Monoglass keeps icons small and real — no filled shapes,
+     no second colour.
+     ========================================================================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 8.5 12 4l10 4.5-10 4.5L2 8.5Z"/><path d="M6 10.7V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.3"/><path d="M22 8.5v5.8"/></symbol>
+    <symbol id="i-passport" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="2.4"/><circle cx="12" cy="10" r="3.2"/><path d="M9 17.5h6"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 10.4 12 3.6l8.5 6.8"/><path d="M5.6 12v7.2a1.2 1.2 0 0 0 1.2 1.2h10.4a1.2 1.2 0 0 0 1.2-1.2V12"/><path d="M9.8 20.4v-5.2h4.4v5.2"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M10.2 13.8 3 11.4l1.5-1.6 4.3.6 3.4-3.4-7-4L7 1.6l9 3.2 3.1-3.1a2 2 0 0 1 2.8 2.8l-3.1 3.1 3.2 9-1.4 1.4-4-7-3.4 3.4.6 4.3-1.6 1.5-2.4-7.2Z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.2A1.8 1.8 0 0 1 5.8 2.4H19v17.2H5.8A1.8 1.8 0 0 0 4 21.4V4.2Z"/><path d="M4 19.6a1.8 1.8 0 0 1 1.8-1.8H19"/><path d="M8 7h7"/><path d="M8 10.6h4.6"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7.6A2.4 2.4 0 0 1 5.4 5.2h13.2A2.4 2.4 0 0 1 21 7.6v9.2a2.4 2.4 0 0 1-2.4 2.4H5.4A2.4 2.4 0 0 1 3 16.8V7.6Z"/><path d="M3 9.8h18"/><circle cx="16.8" cy="14" r="1.1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><rect x="3.2" y="7.4" width="17.6" height="13.2" rx="2.2"/><path d="M8.6 7.4V5.2A1.8 1.8 0 0 1 10.4 3.4h3.2a1.8 1.8 0 0 1 1.8 1.8v2.2"/><path d="M3.2 12.4h17.6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8 4.4 6v6c0 4.4 3.1 8.2 7.6 9.2 4.5-1 7.6-4.8 7.6-9.2V6L12 2.8Z"/><path d="m9.2 12 2 2 3.6-4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.4 5a3.4 3.4 0 0 1 0 6.6"/><path d="M18 14.4a6.2 6.2 0 0 1 3.2 5.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.8 12.4 4.6 4.6 9.8-10"/></symbol>
+    <symbol id="i-check-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.2 2.4 2.4 4.8-5"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4.4 12h15.2"/><path d="m13.6 6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8.2 7H17v8.8"/></symbol>
+    <symbol id="i-chev-d" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M8.2 3.4H5.6a2 2 0 0 0-2 2.2c.5 8 6.6 14.1 14.6 14.6a2 2 0 0 0 2.2-2v-2.6l-4.2-1.6-1.9 2A14.7 14.7 0 0 1 7.8 9.5l2-1.9L8.2 3.4Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.8" y="5" width="18.4" height="14" rx="2.2"/><path d="m3.4 6.8 8.6 6 8.6-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.4 12.4c0 4-3.8 7.2-8.4 7.2a9.7 9.7 0 0 1-2.8-.4L4 21l1.4-3.8a6.8 6.8 0 0 1-1.8-4.8c0-4 3.8-7.2 8.4-7.2s8.4 3.2 8.4 7.2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.4s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10.2" r="2.6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.4 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.9l6.1-.9L12 3.4Z"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.4 5.6C6.2 7 4.4 9.8 4.4 13.4v5h6.2v-6.2H7.4c0-2.4 1-4 3-5l-1-1.6Z" fill="currentColor" stroke="none"/><path d="M19 5.6c-3.2 1.4-5 4.2-5 7.8v5h6.2v-6.2H17c0-2.4 1-4 3-5l-1-1.6Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7.5h16"/><path d="M4 12.5h16"/><path d="M4 17.5h10"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11"/><path d="m17.5 6.5-11 11"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4 17 7M7 17l-1.6 1.6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.6 8.6 0 0 1 9.8 3.6a8.8 8.8 0 1 0 10.6 10.6Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m15.8 15.8 4.4 4.4"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.2 13.7 9l5.8 1.7-5.8 1.7L12 18.2l-1.7-5.8L4.5 10.7 10.3 9 12 3.2Z"/><path d="M18.6 3.4v3M17.1 4.9h3"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M13.6 2.8H6.8a1.8 1.8 0 0 0-1.8 1.8v14.8a1.8 1.8 0 0 0 1.8 1.8h10.4a1.8 1.8 0 0 0 1.8-1.8V8.2l-5.4-5.4Z"/><path d="M13.4 2.8v5.6H19"/><path d="M8.6 13.4h6.8M8.6 16.8h4.6"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.4" y="5" width="17.2" height="16" rx="2.2"/><path d="M3.4 9.8h17.2M8.4 3v4M15.6 3v4"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 26 26"><circle cx="13" cy="19.6" r="2" fill="currentColor" stroke="none"/><path d="M7 14.6a8.5 8.5 0 0 1 12 0" opacity=".55"/><path d="M3.5 11.1a13 13 0 0 1 19 0" opacity=".3"/></symbol>
+  </defs>
+</svg>
+
+<!-- The room the glass lives in -->
+<div class="room" aria-hidden="true">
+  <div class="smoke smoke--a"></div>
+  <div class="smoke smoke--b"></div>
+  <div class="smoke smoke--c"></div>
+  <div class="smoke smoke--d"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ==========================================================================
+     NAV
+     ========================================================================== -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Japa Agency — home">
+    <svg class="brand__mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <circle cx="11" cy="17" r="7.2" stroke="currentColor" stroke-width="1.5" opacity=".38"/>
+      <path d="M4.6 20.4C9 9.6 16.2 4.8 24.4 5.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <circle cx="24.4" cy="5.2" r="2.6" fill="var(--blue)"/>
+    </svg>
+    <span>
+      <span class="brand__name">Japa<span>.</span>Agency</span>
+      <span class="brand__sub">Travels &amp; Tours</span>
+    </span>
+  </a>
+
+  <nav class="nav__links" aria-label="Primary">
+    <a class="nav__link" href="#services">Services</a>
+    <a class="nav__link" href="#process">How it works</a>
+    <a class="nav__link" href="#destinations">Destinations</a>
+    <a class="nav__link" href="#stories">Stories</a>
+    <a class="nav__link" href="#faq">FAQ</a>
+  </nav>
+
+  <div class="nav__actions">
+    <button class="toggle" id="theme" type="button" role="switch" aria-checked="false" aria-label="Switch between light and dark theme">
+      <span class="toggle__puck">
+        <svg class="i toggle__sun"><use href="#i-sun"/></svg>
+        <svg class="i toggle__moon"><use href="#i-moon"/></svg>
+      </span>
+    </button>
+    <a class="btn btn--fill" href="#contact">Book a consultation</a>
+    <button class="nav__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+      <svg class="i i--lg"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ==========================================================================
+     HERO
+     ========================================================================== -->
+<section class="hero">
+  <div class="wrap hero__inner">
+
+    <div class="hero__copy">
+      <p class="eyebrow hero__eyebrow rv">Lagos · Abuja · Port Harcourt</p>
+
+      <h1 class="h1 hero__title rv" style="--rv-delay:60ms">
+        Admission, visa, apartment,<br>
+        flight &mdash;
+        <span class="hero__circled">
+          <em>one team</em>
+          <!-- a circle drawn by hand around the promise -->
+          <svg class="mark" viewBox="0 0 220 90" preserveAspectRatio="none" fill="none" aria-hidden="true" data-draw>
+            <path class="draw" style="--draw-dur:1.35s; --draw-delay:.55s"
+              d="M168 16C140 4 70 4 38 20 8 35 8 62 40 76c34 14 112 12 142-6 24-15 20-42-12-55"/>
+          </svg>
+        </span>.
+      </h1>
+
+      <p class="lead hero__lead rv" style="--rv-delay:140ms">
+        Japa Agency takes Nigerians from the first consultation to the first week abroad.
+        We handle the school applications, the embassy paperwork, the accommodation and the
+        ticket &mdash; and we tell you the truth about your chances before you spend a naira.
+      </p>
+
+      <div class="hero__cta rv" style="--rv-delay:220ms">
+        <a class="btn btn--fill btn--lg" href="#contact">
+          Book a free consultation
+          <svg class="i i--sm"><use href="#i-arrow-r"/></svg>
+        </a>
+        <a class="btn btn--outline btn--lg" href="#process">See how it works</a>
+      </div>
+
+      <div class="hero__note rv" style="--rv-delay:300ms" data-draw>
+        <svg class="hero__arrow mark mark--faint" viewBox="0 0 62 34" fill="none" aria-hidden="true">
+          <path class="draw" style="--draw-dur:.8s; --draw-delay:.9s" d="M3 7c14-5 33 2 42 15"/>
+          <path class="draw" style="--draw-dur:.4s; --draw-delay:1.5s" d="m37 20 9 2-2-9"/>
+        </svg>
+        <span class="hand hand--sm hand--muted">20 minutes, on the phone, completely free</span>
+      </div>
+
+      <div class="hero__facts rv" style="--rv-delay:360ms">
+        <div class="fact"><b class="fact__n num" data-count="20" data-suffix="+">0</b><span class="fact__l">Destination countries</span></div>
+        <div class="fact"><b class="fact__n num" data-count="9">0</b><span class="fact__l">Services, one roof</span></div>
+        <div class="fact"><b class="fact__n">1:1</b><span class="fact__l">Dedicated case officer</span></div>
+        <div class="fact"><b class="fact__n">In&#8209;house</b><span class="fact__l">Document review</span></div>
+      </div>
+    </div>
+
+    <!-- the bubble cluster: photographs floating inside soap-film glass -->
+    <div class="hero__stage rv rv--scale" style="--rv-delay:180ms" aria-hidden="true">
+      <div class="hero__bubble hb-1 px" data-px="-26">
+        <div class="bubble bubble-img">
+          <img src="https://images.unsplash.com/photo-1639765766830-d829d2fe4219?auto=format&fit=crop&w=700&q=75" alt="" loading="eager" decoding="async">
+        </div>
+      </div>
+      <div class="hero__bubble hb-2 px" data-px="18">
+        <div class="bubble bubble-img">
+          <img src="https://images.unsplash.com/photo-1581553673739-c4906b5d0de8?auto=format&fit=crop&w=520&q=75" alt="" loading="eager" decoding="async">
+        </div>
+      </div>
+      <div class="hero__bubble hb-3 px" data-px="-14">
+        <div class="bubble bubble-img">
+          <img src="https://images.unsplash.com/photo-1594937113195-27f8b9046013?auto=format&fit=crop&w=560&q=75" alt="" loading="eager" decoding="async">
+        </div>
+      </div>
+      <div class="hero__bubble hb-4 px" data-px="24">
+        <div class="bubble bubble-img">
+          <img src="https://images.unsplash.com/photo-1682184805271-11671b7ecf4c?auto=format&fit=crop&w=440&q=75" alt="" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="hero__bubble hb-5 px" data-px="-20">
+        <div class="bubble bubble-img">
+          <img src="https://images.unsplash.com/photo-1646658104783-2eec2433c1d1?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <!-- empty bubbles, purely for depth -->
+      <div class="hero__bubble hb-6"><div class="bubble hb-ghost"></div></div>
+      <div class="hero__bubble hb-7"><div class="bubble hb-ghost"></div></div>
+
+      <span class="hero__pin hero__pin--1"><i class="dot dot--live"></i> Offer letter issued</span>
+      <span class="hero__pin hero__pin--2"><svg class="i i--xs"><use href="#i-check"/></svg> Visa filed &middot; Ottawa</span>
+    </div>
+  </div>
+
+  <div class="hero__cue" aria-hidden="true">
+    <span></span>
+    Scroll
+  </div>
+</section>
+
+<!-- ==========================================================================
+     COUNTRY TICKER
+     ========================================================================== -->
+<section class="section--tight" style="padding-block: 0 clamp(40px,6vw,80px)">
+  <div class="marquee mq-text marquee--l" style="--speed:64s" aria-hidden="true">
+    <div class="marquee__track" data-marquee>
+      <span class="mq-word">United Kingdom <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">Canada <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">United States <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">Australia <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">Germany <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">Ireland <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">Malta <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">United Arab Emirates <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">Finland <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+      <span class="mq-word">Cyprus <svg class="i i--sm"><use href="#i-signal"/></svg></span>
+    </div>
+  </div>
+  <p class="wrap mono" style="text-align:center; margin-top: var(--s-9)">
+    Universities and immigration routes we file into every month
+  </p>
+</section>
+
+<!-- ==========================================================================
+     SERVICES
+     ========================================================================== -->
+<section class="section" id="services">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <div class="sec-head__row">
+        <div>
+          <p class="eyebrow rv">What we actually do</p>
+          <h2 class="h2 rv" style="--rv-delay:60ms; margin-top: var(--s-6)">
+            Nine services. One case file.<br>
+            <span class="u-sketch">No hand&#8209;offs.<svg viewBox="0 0 300 22" preserveAspectRatio="none" fill="none" class="mark" data-draw><path class="draw" style="--draw-dur:.9s" d="M4 14c48-7 104-9 150-8 42 1 92 4 142 11"/></svg></span>
+          </h2>
+        </div>
+        <p class="sub rv" style="--rv-delay:120ms; max-width:38ch">
+          Most agencies pass you between three different people and a WhatsApp group.
+          One officer owns your file here, from consultation to arrival.
+        </p>
+      </div>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- 1 -->
+      <article class="svc svc--wide hoverable rv">
+        <div class="svc__media">
+          <div class="media media--scrim">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=75" alt="A university building on a campus quad" loading="lazy" decoding="async">
+          </div>
+          <span class="svc__badge tag tag--solid">Most requested</span>
+        </div>
+        <div class="svc__body">
+          <div class="svc__head">
+            <span class="i-plate"><svg class="i"><use href="#i-cap"/></svg></span>
+            <h3 class="h4">Admissions &amp; school placement</h3>
+          </div>
+          <p class="svc__desc">
+            We shortlist schools against your grades, budget and the visa route you actually
+            qualify for &mdash; then write, submit and chase the applications until an offer
+            letter lands.
+          </p>
+          <ul class="svc__list">
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Course and school shortlisting with real entry requirements</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Statement of purpose and reference letters, drafted with you</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Transcript evaluation, WAEC/NECO and WES where needed</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Scholarship and tuition-discount applications</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="svc svc--wide hoverable rv" style="--rv-delay:80ms">
+        <div class="svc__media">
+          <div class="media media--scrim">
+            <img src="https://images.unsplash.com/photo-1553697388-94e804e2f0f6?auto=format&fit=crop&w=900&q=75" alt="A hand holding two passports" loading="lazy" decoding="async">
+          </div>
+          <span class="svc__badge tag">Where files fail</span>
+        </div>
+        <div class="svc__body">
+          <div class="svc__head">
+            <span class="i-plate"><svg class="i"><use href="#i-passport"/></svg></span>
+            <h3 class="h4">Visas &amp; immigration filing</h3>
+          </div>
+          <p class="svc__desc">
+            Student, visitor, work and dependant routes. Every document is reviewed in-house
+            against the current caseworker guidance before it goes anywhere near a portal.
+          </p>
+          <ul class="svc__list">
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Route eligibility assessed honestly, before you pay a filing fee</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Full document pack assembled, checked and indexed</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Biometrics and appointment booking</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Interview coaching and refusal-appeal support</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="svc svc--third hoverable rv">
+        <div class="svc__media">
+          <div class="media media--scrim">
+            <img src="https://images.unsplash.com/photo-1628592102751-ba83b0314276?auto=format&fit=crop&w=700&q=75" alt="A furnished modern living room" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="svc__body">
+          <div class="svc__head">
+            <span class="i-plate"><svg class="i"><use href="#i-home"/></svg></span>
+            <h3 class="h4">Accommodation abroad</h3>
+          </div>
+          <p class="svc__desc">
+            A signed tenancy or a confirmed hall place before you board &mdash; never a
+            "we'll sort it when you land".
+          </p>
+          <ul class="svc__list">
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Student halls, private flats and shared houses</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Deposits and guarantor problems solved</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Short-let cover for your first two weeks</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="svc svc--third hoverable rv" style="--rv-delay:80ms">
+        <div class="svc__media">
+          <div class="media media--scrim">
+            <img src="https://images.unsplash.com/photo-1580285198593-af9f402c676a?auto=format&fit=crop&w=700&q=75" alt="An aircraft parked on the apron at an airport" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="svc__body">
+          <div class="svc__head">
+            <span class="i-plate"><svg class="i"><use href="#i-plane"/></svg></span>
+            <h3 class="h4">Flights &amp; ticketing</h3>
+          </div>
+          <p class="svc__desc">
+            IATA-standard fares, student baggage allowances and dates that line up with
+            your registration deadline.
+          </p>
+          <ul class="svc__list">
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> One-way, return and open-jaw student fares</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Extra-baggage negotiation</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Travel insurance and airport transfer</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="svc svc--third hoverable rv" style="--rv-delay:160ms">
+        <div class="svc__media">
+          <div class="media media--scrim">
+            <img src="https://images.unsplash.com/photo-1501503069356-3c6b82a17d89?auto=format&fit=crop&w=700&q=75" alt="Students working together in a library" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="svc__body">
+          <div class="svc__head">
+            <span class="i-plate"><svg class="i"><use href="#i-book"/></svg></span>
+            <h3 class="h4">IELTS, TOEFL &amp; PTE prep</h3>
+          </div>
+          <p class="svc__desc">
+            Small classes and mock tests until your band score clears the requirement,
+            not just the average.
+          </p>
+          <ul class="svc__list">
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Diagnostic test before you register</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Weekend and evening cohorts</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Test-centre booking handled for you</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="svc svc--wide hoverable rv">
+        <div class="svc__media">
+          <div class="media media--scrim">
+            <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=900&q=75" alt="Two people reviewing and signing documents at a desk" loading="lazy" decoding="async">
+          </div>
+          <span class="svc__badge tag tag--blue">Done properly</span>
+        </div>
+        <div class="svc__body">
+          <div class="svc__head">
+            <span class="i-plate"><svg class="i"><use href="#i-wallet"/></svg></span>
+            <h3 class="h4">Proof of funds &amp; financial documentation</h3>
+          </div>
+          <p class="svc__desc">
+            The single most common reason a Nigerian application is refused. We show you
+            exactly what the caseworker needs to see, how long it must sit there, and
+            which sponsor letters actually hold up &mdash; using your own genuine funds.
+          </p>
+          <ul class="svc__list">
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Maintenance-requirement calculation per country</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Bank statement and sponsorship letter formatting</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Tuition deposit and SEVIS/CAS payment guidance</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Domiciliary account and FX transfer routes</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="svc svc--wide hoverable rv" style="--rv-delay:80ms">
+        <div class="svc__media">
+          <div class="media media--scrim">
+            <img src="https://images.unsplash.com/photo-1572358707000-39729872feba?auto=format&fit=crop&w=900&q=75" alt="A traveller wheeling a suitcase through an airport" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="svc__body">
+          <div class="svc__head">
+            <span class="i-plate"><svg class="i"><use href="#i-bag"/></svg></span>
+            <h3 class="h4">Arrival &amp; settling in</h3>
+          </div>
+          <p class="svc__desc">
+            The first fortnight is where people struggle. We stay on the file until your
+            bank account opens and your registration is confirmed.
+          </p>
+          <ul class="svc__list">
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Airport pickup and first-night accommodation</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Bank account, SIM card and transport card setup</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> School registration and residence-permit collection</li>
+            <li><svg class="i i--xs"><use href="#i-check"/></svg> Introduction to the local Nigerian student community</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     IMAGE MARQUEES — two rows, opposite directions
+     ========================================================================== -->
+<section class="section--tight" aria-label="Photographs from journeys we have handled">
+  <div class="wrap" style="margin-bottom: var(--s-10)">
+    <div class="sec-head__row">
+      <p class="eyebrow rv">The journey, in pictures</p>
+      <p class="hand hand--md rv" style="transform: rotate(-2deg)">departure &rarr; arrival &rarr; graduation</p>
+    </div>
+  </div>
+
+  <div class="marquee marquee--l" style="--speed:70s; margin-bottom: var(--s-6)">
+    <div class="marquee__track" data-marquee>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1502301197179-65228ab57f78?auto=format&fit=crop&w=520&q=72" alt="An open suitcase packed for travel" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Packing week</span><span class="mono">01</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1527007622069-3a0241e1cd8c?auto=format&fit=crop&w=520&q=72" alt="A departures area inside an airport terminal" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Departures</span><span class="mono">02</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1530469525856-cf37954301f7?auto=format&fit=crop&w=520&q=72" alt="A passport held up against an aircraft window" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Stamped</span><span class="mono">03</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1549897411-b06572cdf806?auto=format&fit=crop&w=520&q=72" alt="Empty seating in an airport gate area" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">The gate</span><span class="mono">04</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1561131668-f63504fc549d?auto=format&fit=crop&w=520&q=72" alt="Silhouettes of travellers with luggage in a sunlit terminal" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Boarding</span><span class="mono">05</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1543797414-a0c3ad076f7c?auto=format&fit=crop&w=520&q=72" alt="Looking out of an aircraft window" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Window seat</span><span class="mono">06</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1534534573898-db5148bc8b0c?auto=format&fit=crop&w=520&q=72" alt="Luggage stacked at a baggage hall" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Baggage claim</span><span class="mono">07</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1570114581742-586696237de1?auto=format&fit=crop&w=520&q=72" alt="Sunset through the windows of an airport terminal" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Landed</span><span class="mono">08</span></figcaption></figure>
+    </div>
+  </div>
+
+  <div class="marquee marquee--r mq-strip" style="--speed:84s">
+    <div class="marquee__track" data-marquee>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1536925155833-43e9c2b2f499?auto=format&fit=crop&w=600&q=72" alt="A student reading alone in a lecture hall" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">First lecture</span><span class="mono">09</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=600&q=72" alt="Students walking across a university campus" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Campus</span><span class="mono">10</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1662454419716-c4c504728811?auto=format&fit=crop&w=600&q=72" alt="A tidy bedroom in student accommodation" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Your room</span><span class="mono">11</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=600&q=72" alt="Shelves of books in a library" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">The library</span><span class="mono">12</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1577985043696-8bd54d9f093f?auto=format&fit=crop&w=600&q=72" alt="A group of friends sitting together outdoors" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">New people</span><span class="mono">13</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1530608031805-8e170c1b793a?auto=format&fit=crop&w=600&q=72" alt="The interior of a historic library" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Study week</span><span class="mono">14</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1633734973050-d6499a977c17?auto=format&fit=crop&w=600&q=72" alt="Graduates in gowns at a commencement ceremony" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Graduation</span><span class="mono">15</span></figcaption></figure>
+      <figure class="mq-card"><div class="media"><img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?auto=format&fit=crop&w=600&q=72" alt="A graduate throwing her cap in the air" loading="lazy" decoding="async"></div><figcaption class="mq-card__cap"><span class="name">Done</span><span class="mono">16</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     PROCESS
+     ========================================================================== -->
+<section class="section process" id="process">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <div class="sec-head__row">
+        <div>
+          <p class="eyebrow rv">How it works</p>
+          <h2 class="h2 rv" style="--rv-delay:60ms; margin-top: var(--s-6)">
+            Five stages.<br>You always know which one you are on.
+          </h2>
+        </div>
+        <p class="sub rv" style="--rv-delay:120ms; max-width:36ch">
+          Your case officer updates the file after every stage, and you get the same update
+          on WhatsApp the day it happens.
+        </p>
+      </div>
+    </div>
+
+    <!-- the hand-drawn thread running behind the cards -->
+    <svg class="process__line mark mark--faint" viewBox="0 0 1200 260" preserveAspectRatio="none" fill="none" aria-hidden="true" data-draw>
+      <path class="draw" style="--draw-dur:2.4s"
+        d="M18 62c150-46 250 62 400 44s232-96 372-58 220 96 392 34"
+        stroke-dasharray="0" opacity=".5"/>
+    </svg>
+
+    <div class="steps">
+      <article class="step rv">
+        <span class="step__n">01</span>
+        <h3 class="step__t">Free consultation</h3>
+        <p class="step__d">
+          Twenty minutes on the phone. We look at your grades, funds and timeline and tell you
+          which countries are realistic &mdash; including when the answer is "not yet".
+        </p>
+        <p class="step__time mono">Day 0 &middot; no fee</p>
+      </article>
+
+      <article class="step rv" style="--rv-delay:70ms">
+        <span class="step__n">02</span>
+        <h3 class="step__t">Shortlist &amp; apply</h3>
+        <p class="step__d">
+          We build a school and course shortlist, prepare your statement and references, and
+          submit every application under one deadline calendar.
+        </p>
+        <p class="step__time mono">Week 1&ndash;3</p>
+      </article>
+
+      <article class="step rv" style="--rv-delay:140ms">
+        <span class="step__n">03</span>
+        <h3 class="step__t">Offer &amp; deposit</h3>
+        <p class="step__d">
+          Offers come back, we compare them properly &mdash; fees, post-study work rights,
+          city cost of living &mdash; and you accept one. Deposit and CAS/I-20 follow.
+        </p>
+        <p class="step__time mono">Week 4&ndash;8</p>
+      </article>
+
+      <article class="step rv" style="--rv-delay:210ms">
+        <span class="step__n">04</span>
+        <h3 class="step__t">Visa filing</h3>
+        <p class="step__d">
+          Document pack assembled and reviewed in-house, biometrics booked, interview
+          rehearsed. Nothing is submitted until it is right.
+        </p>
+        <p class="step__time mono">Week 8&ndash;14</p>
+      </article>
+
+      <article class="step rv" style="--rv-delay:280ms">
+        <span class="step__n">05</span>
+        <h3 class="step__t">Fly &amp; settle</h3>
+        <p class="step__d">
+          Ticket, accommodation keys, airport pickup, bank account, registration. The file
+          closes when you are actually settled, not when you board.
+        </p>
+        <p class="step__time mono">Departure &amp; +14 days</p>
+      </article>
+    </div>
+
+    <p class="hand hand--md rv" style="margin-top: var(--s-11); text-align:center; transform: rotate(-1.2deg)">
+      <span class="write" data-write>and yes &mdash; you can call your officer directly, not a call centre</span>
+    </p>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     DESTINATIONS
+     ========================================================================== -->
+<section class="section" id="destinations">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <div class="sec-head__row">
+        <div>
+          <p class="eyebrow rv">Where we file</p>
+          <h2 class="h2 rv" style="--rv-delay:60ms; margin-top: var(--s-6)">Pick a country. We will tell you the truth about it.</h2>
+        </div>
+        <p class="sub rv" style="--rv-delay:120ms; max-width:36ch">
+          Tuition, living costs, post-study work rights and refusal rates differ enormously.
+          Ask us before you fall in love with a brochure.
+        </p>
+      </div>
+    </div>
+
+    <div class="dest-grid">
+
+      <a class="dest rv" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=680&q=75" alt="Tower Bridge over the River Thames in London" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🇬🇧</span>
+          <span class="dest__name">United Kingdom</span>
+          <span class="dest__meta">Student route <i></i> 2yr PSW <i></i> Jan &amp; Sep intake</span>
+        </div>
+      </a>
+
+      <a class="dest rv" style="--rv-delay:60ms" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=680&q=75" alt="The Toronto skyline and CN Tower at golden hour" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🇨🇦</span>
+          <span class="dest__name">Canada</span>
+          <span class="dest__meta">Study permit <i></i> PGWP <i></i> PR pathway</span>
+        </div>
+      </a>
+
+      <a class="dest rv" style="--rv-delay:120ms" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=680&q=75" alt="The New York City skyline seen across the Hudson River" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🇺🇸</span>
+          <span class="dest__name">United States</span>
+          <span class="dest__meta">F-1 <i></i> OPT &amp; STEM OPT <i></i> I-20</span>
+        </div>
+      </a>
+
+      <a class="dest rv" style="--rv-delay:180ms" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1546268060-2592ff93ee24?auto=format&fit=crop&w=680&q=75" alt="Aerial view of Sydney Harbour Bridge and the Opera House" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🇦🇺</span>
+          <span class="dest__name">Australia</span>
+          <span class="dest__meta">Subclass 500 <i></i> Work rights <i></i> Feb &amp; Jul</span>
+        </div>
+      </a>
+
+      <a class="dest rv" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?auto=format&fit=crop&w=680&q=75" alt="The Brandenburg Gate in Berlin illuminated at night" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🇩🇪</span>
+          <span class="dest__name">Germany</span>
+          <span class="dest__meta">Low tuition <i></i> Blocked account <i></i> 18mo job seek</span>
+        </div>
+      </a>
+
+      <a class="dest rv" style="--rv-delay:60ms" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1586724229931-cd4cd3b50ddc?auto=format&fit=crop&w=680&q=75" alt="An aerial view of Dublin beside the water" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🇮🇪</span>
+          <span class="dest__name">Ireland</span>
+          <span class="dest__meta">Stamp 2 <i></i> 2yr stay back <i></i> EU access</span>
+        </div>
+      </a>
+
+      <a class="dest rv" style="--rv-delay:120ms" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=680&q=75" alt="The Burj Khalifa above the Dubai skyline" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🇦🇪</span>
+          <span class="dest__name">United Arab Emirates</span>
+          <span class="dest__meta">Study &amp; work <i></i> Tax free <i></i> 4hr flight</span>
+        </div>
+      </a>
+
+      <!-- the eighth tile is a door, not a country -->
+      <a class="dest rv" style="--rv-delay:180ms" href="#contact">
+        <div class="media media--scrim">
+          <img src="https://images.unsplash.com/photo-1558882423-f05f3544bebc?auto=format&fit=crop&w=680&q=75" alt="An aircraft wing above the clouds" loading="lazy" decoding="async">
+        </div>
+        <span class="dest__go"><svg class="i i--sm"><use href="#i-arrow-ur"/></svg></span>
+        <div class="dest__body">
+          <span class="dest__flag">🌍</span>
+          <span class="dest__name">13 more countries</span>
+          <span class="dest__meta">Malta <i></i> Cyprus <i></i> Finland <i></i> Ask us</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     WHY US + STATS
+     NOTE FOR HANDOVER: every figure in this block is placeholder copy.
+     Replace with the client's audited numbers before this goes live.
+     ========================================================================== -->
+<section class="section" id="why">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <p class="eyebrow rv">Why people send us their cousins</p>
+      <h2 class="h2 rv" style="--rv-delay:60ms">
+        We would rather lose the fee<br>
+        than file a case that will be refused.
+      </h2>
+    </div>
+
+    <div class="stats rv" style="margin-bottom: var(--s-12)">
+      <div class="stat">
+        <span class="stat__b">Since 2013</span>
+        <b class="stat__n num" data-count="2400" data-suffix="+">0</b>
+        <span class="stat__l">Students and families relocated</span>
+      </div>
+      <div class="stat">
+        <span class="stat__b">Across</span>
+        <b class="stat__n num" data-count="20" data-suffix="+">0</b>
+        <span class="stat__l">Destination countries</span>
+      </div>
+      <div class="stat">
+        <span class="stat__b">Reviewed in-house</span>
+        <b class="stat__n num" data-count="100" data-suffix="%">0</b>
+        <span class="stat__l">Documents, before submission</span>
+      </div>
+      <div class="stat">
+        <span class="stat__b">We reply within</span>
+        <b class="stat__n num" data-count="24" data-suffix="h">0</b>
+        <span class="stat__l">On every working day</span>
+      </div>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="glass rv hoverable" style="padding: var(--s-10); display:flex; flex-direction:column; gap:var(--s-6)">
+        <span class="i-plate"><svg class="i"><use href="#i-shield"/></svg></span>
+        <h3 class="h4">An honest first answer</h3>
+        <p class="sub">
+          If your funds, grades or timeline do not support the country you have in mind,
+          we say so on the first call &mdash; and show you what would change it. A refusal
+          on your record is far more expensive than a "not yet" from us.
+        </p>
+      </article>
+
+      <article class="glass rv hoverable" style="--rv-delay:80ms; padding: var(--s-10); display:flex; flex-direction:column; gap:var(--s-6)">
+        <span class="i-plate"><svg class="i"><use href="#i-users"/></svg></span>
+        <h3 class="h4">One officer, start to finish</h3>
+        <p class="sub">
+          You get a named person with a direct line, not a shared inbox. They own your file
+          from the consultation through to your first week abroad, and they know your case
+          without re-reading it.
+        </p>
+      </article>
+
+      <article class="glass rv hoverable" style="--rv-delay:160ms; padding: var(--s-10); display:flex; flex-direction:column; gap:var(--s-6)">
+        <span class="i-plate"><svg class="i"><use href="#i-doc"/></svg></span>
+        <h3 class="h4">Everything in writing</h3>
+        <p class="sub">
+          Fees, timelines, what we do and what stays your responsibility &mdash; all in a
+          signed service agreement before any money moves. No surprise charges at the
+          visa stage.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     BUBBLE FIELD — photographs drifting in soap-film glass
+     ========================================================================== -->
+<section class="bfield" aria-label="People we have helped relocate">
+  <div class="fb d1" style="top:5%;  left:3%;  width:13%; aspect-ratio:1"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1645736353780-e70a7d508088?auto=format&fit=crop&w=320&q=72" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="fb d3" style="top:36%; left:11%; width:9%;  aspect-ratio:1; --dur-float:23s"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=260&q=72" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="fb d2" style="top:60%; left:2%;  width:15%; aspect-ratio:1"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1594750852563-5ed8e0421d40?auto=format&fit=crop&w=340&q=72" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="fb d4 fb--in" style="top:13%; left:22%; width:8%; aspect-ratio:1"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1662850886700-4ec19bd30d11?auto=format&fit=crop&w=240&q=72" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="fb d1 fb--in" style="bottom:7%; left:20%; width:11%; aspect-ratio:1; --dur-float:18s"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1618355776464-8666794d2520?auto=format&fit=crop&w=300&q=72" alt="" loading="lazy" decoding="async"></div></div>
+
+  <div class="fb d2" style="top:7%;  right:4%; width:14%; aspect-ratio:1"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1646658104783-2eec2433c1d1?auto=format&fit=crop&w=330&q=72" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="fb d4" style="top:40%; right:12%; width:10%; aspect-ratio:1; --dur-float:25s"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1659422440915-d516c6dc932e?auto=format&fit=crop&w=280&q=72" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="fb d3" style="top:64%; right:3%; width:13%; aspect-ratio:1"><div class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1614023342667-6f060e9d1e04?auto=format&fit=crop&w=320&q=72" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="fb d1 fb--in fb--ghost" style="top:18%; right:24%; width:7%; aspect-ratio:1"><div class="bubble"></div></div>
+  <div class="fb d3 fb--in fb--ghost" style="bottom:14%; right:21%; width:9%; aspect-ratio:1"><div class="bubble"></div></div>
+
+  <div class="bfield__center">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:var(--s-7); max-width:44ch">
+      <p class="eyebrow rv">Real files, real people</p>
+      <h2 class="h3 rv" style="--rv-delay:60ms">Every bubble here was somebody's plan before it was somebody's address.</h2>
+      <a class="btn btn--outline rv" style="--rv-delay:140ms" href="#stories">
+        Read their stories
+        <svg class="i i--sm"><use href="#i-arrow-r"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     PINTEREST GALLERY
+     ========================================================================== -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head__row">
+        <div>
+          <p class="eyebrow rv">The board</p>
+          <h2 class="h2 rv" style="--rv-delay:60ms">Somewhere on this wall is your next four years.</h2>
+        </div>
+        <p class="hand hand--md rv" style="transform:rotate(2deg)">save the ones you like &darr;</p>
+      </div>
+    </div>
+
+    <div class="pins">
+      <a class="pin rv" href="#contact"><div class="media"><img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?auto=format&fit=crop&w=560&q=74" alt="A graduate throwing her cap into the air" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Graduation day</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:40ms" href="#destinations"><div class="media"><img src="https://images.unsplash.com/photo-1549483249-f0b359d1e289?auto=format&fit=crop&w=560&q=74" alt="The London skyline along the Thames at low sun" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">London, UK</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:80ms" href="#contact"><div class="media"><img src="https://images.unsplash.com/photo-1618355776464-8666794d2520?auto=format&fit=crop&w=560&q=74" alt="A smiling graduate in cap and gown" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Class of 2025</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:120ms" href="#services"><div class="media"><img src="https://images.unsplash.com/photo-1558882423-f05f3544bebc?auto=format&fit=crop&w=560&q=74" alt="An aircraft wing above cloud" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Somewhere over the Sahara</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" href="#destinations"><div class="media"><img src="https://images.unsplash.com/photo-1507992781348-310259076fe0?auto=format&fit=crop&w=560&q=74" alt="Toronto skyline across Lake Ontario at golden hour" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Toronto, Canada</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:40ms" href="#services"><div class="media"><img src="https://images.unsplash.com/photo-1559135197-8a45ea74d367?auto=format&fit=crop&w=560&q=74" alt="A white university building on a bright day" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Offer accepted</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:80ms" href="#stories"><div class="media"><img src="https://images.unsplash.com/photo-1594750852563-5ed8e0421d40?auto=format&fit=crop&w=560&q=74" alt="A graduate in academic gown standing outdoors" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Chidi, MSc Data Science</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:120ms" href="#destinations"><div class="media"><img src="https://images.unsplash.com/photo-1602940659805-770d1b3b9911?auto=format&fit=crop&w=560&q=74" alt="Crowds crossing Times Square under neon signs" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">New York, USA</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" href="#services"><div class="media"><img src="https://images.unsplash.com/photo-1530608031805-8e170c1b793a?auto=format&fit=crop&w=560&q=74" alt="The interior of a historic library" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Study season</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:40ms" href="#services"><div class="media"><img src="https://images.unsplash.com/photo-1662454419716-c4c504728811?auto=format&fit=crop&w=560&q=74" alt="A bedroom in student accommodation" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Keys collected</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:80ms" href="#destinations"><div class="media"><img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=560&q=74" alt="A brick and stone campus building" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Campus tour</span><span class="pin__save">Save</span></span></a>
+      <a class="pin rv" style="--rv-delay:120ms" href="#contact"><div class="media"><img src="https://images.unsplash.com/photo-1570114581742-586696237de1?auto=format&fit=crop&w=560&q=74" alt="Sunset through an airport terminal window" loading="lazy" decoding="async"></div><span class="pin__cap"><span class="name">Landed safely</span><span class="pin__save">Save</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     TESTIMONIALS
+     NOTE FOR HANDOVER: names, quotes and photographs are placeholders.
+     Swap for real, consented client testimonials before launch.
+     ========================================================================== -->
+<section class="section" id="stories">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head__row">
+        <div>
+          <p class="eyebrow rv">Stories</p>
+          <h2 class="h2 rv" style="--rv-delay:60ms">People who are already there.</h2>
+        </div>
+        <div class="rv" style="--rv-delay:120ms; display:flex; align-items:center; gap:var(--s-5)">
+          <span class="quote__stars">
+            <svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg>
+            <svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg>
+            <svg class="i"><use href="#i-star"/></svg>
+          </span>
+          <span class="mono">4.9 average &middot; 300+ reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quotes">
+      <article class="quote rv">
+        <svg class="i i--xl quote__mark"><use href="#i-quote"/></svg>
+        <p class="quote__text">
+          I had already been refused once on my own. They went through my old application,
+          showed me exactly which two documents sank it, and made me wait three months before
+          refiling. Second attempt went through in eleven days.
+        </p>
+        <div class="quote__by">
+          <span class="quote__ava"><span class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=160&q=70" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="quote__who">
+            <span class="name">Tunde B.</span>
+            <span class="mono">MSc Cybersecurity &middot; Coventry, UK</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="quote quote--lift rv" style="--rv-delay:80ms">
+        <svg class="i i--xl quote__mark"><use href="#i-quote"/></svg>
+        <p class="quote__text">
+          What sold me was that they talked me out of my first choice. I wanted Australia,
+          my funds did not support it, and they said so instead of collecting my money.
+          I am in Ottawa now and it was the right call.
+        </p>
+        <div class="quote__by">
+          <span class="quote__ava"><span class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1645736353780-e70a7d508088?auto=format&fit=crop&w=160&q=70" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="quote__who">
+            <span class="name">Chidinma O.</span>
+            <span class="mono">Nursing &middot; Ottawa, Canada</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="quote rv" style="--rv-delay:160ms">
+        <svg class="i i--xl quote__mark"><use href="#i-quote"/></svg>
+        <p class="quote__text">
+          The accommodation part is what people underestimate. I landed at 6am and there was
+          somebody at arrivals with my name, and keys to a flat I had already signed for from
+          Lagos. My cousin slept in a hostel for two weeks.
+        </p>
+        <div class="quote__by">
+          <span class="quote__ava"><span class="bubble bubble-img"><img src="https://images.unsplash.com/photo-1646658104783-2eec2433c1d1?auto=format&fit=crop&w=160&q=70" alt="" loading="lazy" decoding="async"></span></span>
+          <span class="quote__who">
+            <span class="name">Ibrahim S.</span>
+            <span class="mono">MEng &middot; Dublin, Ireland</span>
+          </span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     ELIGIBILITY CHECKER
+     A local, front-end-only indicator. It does not submit anywhere and it is
+     explicitly not an assessment — the copy says so.
+     ========================================================================== -->
+<section class="section" id="check">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head__row">
+        <div>
+          <p class="eyebrow rv">Before you call</p>
+          <h2 class="h2 rv" style="--rv-delay:60ms">Rough idea of where you stand.</h2>
+        </div>
+        <p class="sub rv" style="--rv-delay:120ms; max-width:36ch">
+          Four questions, nothing stored, nothing sent. It is a sense-check, not a decision
+          &mdash; a real assessment happens on the call.
+        </p>
+      </div>
+    </div>
+
+    <div class="checker rv">
+      <form class="checker__form" id="checkForm" novalidate>
+        <div class="checker__row">
+          <div class="field">
+            <label for="c-country">Destination</label>
+            <select class="select" id="c-country">
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+              <option value="us">United States</option>
+              <option value="au">Australia</option>
+              <option value="de">Germany</option>
+              <option value="ie">Ireland</option>
+              <option value="ae">United Arab Emirates</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-level">Study level</label>
+            <select class="select" id="c-level">
+              <option value="ug">Undergraduate</option>
+              <option value="pg" selected>Postgraduate / Masters</option>
+              <option value="phd">PhD</option>
+              <option value="dip">Diploma / Foundation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="checker__row">
+          <div class="field">
+            <label for="c-grade">Last qualification</label>
+            <select class="select" id="c-grade">
+              <option value="4">First Class / Distinction</option>
+              <option value="3" selected>Second Class Upper / Credit</option>
+              <option value="2">Second Class Lower / Merit</option>
+              <option value="1">Third Class / Pass</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-english">English test</label>
+            <select class="select" id="c-english">
+              <option value="3">IELTS 7.0 or above</option>
+              <option value="2" selected>IELTS 6.0 &ndash; 6.5</option>
+              <option value="1">Below 6.0</option>
+              <option value="0">Not taken yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="c-funds">Funds you can evidence today (₦)</label>
+          <select class="select" id="c-funds">
+            <option value="4">Above ₦40m</option>
+            <option value="3" selected>₦20m &ndash; ₦40m</option>
+            <option value="2">₦10m &ndash; ₦20m</option>
+            <option value="1">Below ₦10m</option>
+          </select>
+        </div>
+
+        <p class="form-note">
+          <svg class="i i--xs"><use href="#i-shield"/></svg>
+          Nothing you pick here leaves your browser. There is no form submission on this step.
+        </p>
+      </form>
+
+      <aside class="checker__out" aria-live="polite">
+        <p class="eyebrow">Indicative reading</p>
+        <div class="checker__score">
+          <b id="scoreN">0</b>
+          <span class="dim">/ 100 readiness</span>
+        </div>
+        <div class="checker__bar"><i id="scoreBar"></i></div>
+        <p class="sub" id="scoreVerdict">Adjust the answers on the left.</p>
+        <ul class="checker__notes" id="scoreNotes"></ul>
+        <a class="btn btn--fill btn--block" href="#contact" style="margin-top:auto">
+          Get a real assessment
+          <svg class="i i--sm"><use href="#i-arrow-r"/></svg>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FAQ
+     ========================================================================== -->
+<section class="section" id="faq">
+  <div class="wrap wrap--narrow">
+    <div class="sec-head">
+      <p class="eyebrow rv">Questions we get every week</p>
+      <h2 class="h2 rv" style="--rv-delay:60ms">The awkward ones, answered.</h2>
+    </div>
+
+    <div class="faq" id="faqList">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">How much does it cost?<span class="faq__sign" aria-hidden="true"></span></button>
+        <div class="faq__a"><div><p>The consultation is free. After that we charge a flat service fee per destination, quoted in writing before you commit, split across two stages &mdash; application and visa filing. Third-party costs (application fees, tuition deposits, visa fees, biometrics, medicals, courier) are paid by you directly to those bodies, never through us. You will see the full breakdown on your service agreement.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">Can you guarantee my visa?<span class="faq__sign" aria-hidden="true"></span></button>
+        <div class="faq__a"><div><p>No, and neither can anyone else. The decision belongs to the embassy or the immigration authority, full stop. Any agency promising a guaranteed visa is either lying or planning to submit something fraudulent on your behalf &mdash; both of which end with a refusal stamp and a ban on your record. What we can do is make sure your file is complete, truthful and formatted the way the caseworker expects.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">I was refused before. Is it over?<span class="faq__sign" aria-hidden="true"></span></button>
+        <div class="faq__a"><div><p>Usually not. Bring the refusal letter to the consultation &mdash; it tells us precisely which paragraph of the rules the caseworker applied. Most refusals we see come down to fixable things: funds held for too short a period, an unclear sponsor relationship, a course that does not show academic progression, or a weak answer at interview. Some need you to wait; we will tell you how long.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">Do you help with fake documents or "arranged" bank statements?<span class="faq__sign" aria-hidden="true"></span></button>
+        <div class="faq__a"><div><p>Never. It is the fastest way to a ten-year ban, and it puts every other client of ours under suspicion. We work only with genuine documents and genuine funds. If your funds are not there yet, we will show you the actual threshold, the holding period, and a realistic timeline for meeting it.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">Can my spouse and children come with me?<span class="faq__sign" aria-hidden="true"></span></button>
+        <div class="faq__a"><div><p>It depends entirely on the country and the course level, and the rules have tightened in several places recently. Some routes allow dependants on postgraduate research programmes only; others allow them broadly but require substantially higher maintenance funds. We will map your specific situation on the call rather than give you a general answer that turns out not to apply.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">How early should I start?<span class="faq__sign" aria-hidden="true"></span></button>
+        <div class="faq__a"><div><p>Nine to twelve months before your intended intake is comfortable. Six months is workable. Under three months you are gambling on processing times you cannot control, and you will usually pay more for flights and short-let accommodation. If your funds still need to season in an account, add that period on top.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false">Do you only work with students?<span class="faq__sign" aria-hidden="true"></span></button>
+        <div class="faq__a"><div><p>No. Study routes are the bulk of our work because they are the most reliable path for most Nigerians, but we also handle visitor visas, skilled work routes where a genuine job offer exists, dependant applications, and relocation logistics for families who already have status.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     CONTACT
+     NOTE FOR HANDOVER: phone number, email, address and office photo are
+     placeholders. The form needs an endpoint — see assets/js/app.js.
+     ========================================================================== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact">
+
+      <div class="contact__intro">
+        <p class="eyebrow rv">Start here</p>
+        <h2 class="h2 rv" style="--rv-delay:60ms; margin: var(--s-6) 0 var(--s-8)">
+          Tell us where you want to be<br>this time next year.
+        </h2>
+        <p class="lead rv" style="--rv-delay:120ms">
+          Fill this in and a case officer calls you within one working day. If your plan is
+          not realistic yet, they will tell you on that call &mdash; and tell you what to
+          change.
+        </p>
+
+        <div class="contact__ways rv" style="--rv-delay:180ms">
+          <a class="way" href="https://wa.me/2348012345678" target="_blank" rel="noopener noreferrer">
+            <span class="i-plate"><svg class="i i--sm"><use href="#i-chat"/></svg></span>
+            <span class="way__t"><span class="name">WhatsApp</span><span class="mono">+234 801 234 5678</span></span>
+            <svg class="i i--sm way__go"><use href="#i-arrow-ur"/></svg>
+          </a>
+          <a class="way" href="tel:+2348012345678">
+            <span class="i-plate"><svg class="i i--sm"><use href="#i-phone"/></svg></span>
+            <span class="way__t"><span class="name">Call the office</span><span class="mono">Mon&ndash;Fri, 9am&ndash;6pm WAT</span></span>
+            <svg class="i i--sm way__go"><use href="#i-arrow-ur"/></svg>
+          </a>
+          <a class="way" href="mailto:hello@japa.agency">
+            <span class="i-plate"><svg class="i i--sm"><use href="#i-mail"/></svg></span>
+            <span class="way__t"><span class="name">Email</span><span class="mono">hello@japa.agency</span></span>
+            <svg class="i i--sm way__go"><use href="#i-arrow-ur"/></svg>
+          </a>
+        </div>
+
+        <div class="office rv" style="--rv-delay:240ms">
+          <div class="media">
+            <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=760&q=74" alt="Two people in consultation at a table in an office" loading="lazy" decoding="async">
+          </div>
+          <div class="office__b">
+            <span class="i-plate"><svg class="i i--sm"><use href="#i-pin"/></svg></span>
+            <span class="way__t">
+              <span class="name">Walk in and see us</span>
+              <span class="mono">Victoria Island, Lagos &middot; Wuse II, Abuja</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact__card rv" id="leadForm" style="--rv-delay:100ms" novalidate>
+        <div class="contact__row">
+          <div class="field">
+            <label for="f-name">Full name</label>
+            <input class="input" id="f-name" name="name" type="text" autocomplete="name" placeholder="Adaeze Nwosu" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone / WhatsApp</label>
+            <input class="input" id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="0801 234 5678" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="contact__row">
+          <div class="field">
+            <label for="f-dest">Preferred destination</label>
+            <select class="select" id="f-dest" name="destination">
+              <option>Not sure yet — advise me</option>
+              <option>United Kingdom</option>
+              <option>Canada</option>
+              <option>United States</option>
+              <option>Australia</option>
+              <option>Germany</option>
+              <option>Ireland</option>
+              <option>United Arab Emirates</option>
+              <option>Somewhere else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-service">What do you need?</label>
+            <select class="select" id="f-service" name="service">
+              <option>Study abroad — full package</option>
+              <option>Visa filing only</option>
+              <option>Accommodation abroad</option>
+              <option>Flights &amp; ticketing</option>
+              <option>IELTS / TOEFL / PTE prep</option>
+              <option>Refused before — reassessment</option>
+              <option>Family relocation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-msg">Anything we should know</label>
+          <textarea class="textarea" id="f-msg" name="message" placeholder="Your qualification, when you want to travel, whether you have been refused before…"></textarea>
+        </div>
+
+        <button class="btn btn--fill btn--lg btn--block" type="submit">
+          Request my free consultation
+          <svg class="i i--sm"><use href="#i-arrow-r"/></svg>
+        </button>
+
+        <p class="form-note">
+          <svg class="i i--xs"><use href="#i-shield"/></svg>
+          We use your details to contact you about your enquiry and nothing else.
+          No lists, no resale, no WhatsApp broadcast groups.
+        </p>
+
+        <p class="form-note" id="formStatus" role="status" hidden></p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     CTA BAND
+     ========================================================================== -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta rv">
+      <div class="cta__bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1561131668-f63504fc549d?auto=format&fit=crop&w=1600&q=72" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="cta__inner">
+        <p class="eyebrow">One call changes the plan</p>
+        <h2 class="h2" style="max-width:20ch">
+          The people already there<br>started with a phone call too.
+        </h2>
+        <p class="hand hand--lg" style="transform:rotate(-2deg)">
+          <span class="write" data-write>so&hellip; when are you leaving?</span>
+        </p>
+        <div class="cta__row">
+          <a class="btn btn--fill btn--lg" href="#contact">Book a free consultation</a>
+          <a class="btn btn--outline btn--lg" href="https://wa.me/2348012345678" target="_blank" rel="noopener noreferrer">
+            <svg class="i i--sm"><use href="#i-chat"/></svg>
+            Message on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a class="brand" href="#top" style="margin-bottom: var(--s-7)">
+          <svg class="brand__mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <circle cx="11" cy="17" r="7.2" stroke="currentColor" stroke-width="1.5" opacity=".38"/>
+            <path d="M4.6 20.4C9 9.6 16.2 4.8 24.4 5.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="24.4" cy="5.2" r="2.6" fill="var(--blue)"/>
+          </svg>
+          <span>
+            <span class="brand__name">Japa<span>.</span>Agency</span>
+            <span class="brand__sub">Travels &amp; Tours</span>
+          </span>
+        </a>
+        <p class="sub" style="max-width:34ch">
+          Study, work and relocation services for Nigerians. Admissions, visas,
+          accommodation and flights &mdash; handled by one team, in writing.
+        </p>
+        <div class="footer__social" style="margin-top: var(--s-9)">
+          <a href="#" aria-label="Instagram"><svg class="i i--sm"><use href="#i-spark"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg class="i i--sm"><use href="#i-chat"/></svg></a>
+          <a href="#" aria-label="Email"><svg class="i i--sm"><use href="#i-mail"/></svg></a>
+          <a href="#" aria-label="Phone"><svg class="i i--sm"><use href="#i-phone"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Admissions &amp; placement</a></li>
+          <li><a href="#services">Visas &amp; immigration</a></li>
+          <li><a href="#services">Accommodation abroad</a></li>
+          <li><a href="#services">Flights &amp; ticketing</a></li>
+          <li><a href="#services">IELTS / TOEFL / PTE</a></li>
+          <li><a href="#services">Proof of funds</a></li>
+          <li><a href="#services">Arrival support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#destinations">United Kingdom</a></li>
+          <li><a href="#destinations">Canada</a></li>
+          <li><a href="#destinations">United States</a></li>
+          <li><a href="#destinations">Australia</a></li>
+          <li><a href="#destinations">Germany</a></li>
+          <li><a href="#destinations">Ireland</a></li>
+          <li><a href="#destinations">All 20 countries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#stories">Client stories</a></li>
+          <li><a href="#check">Eligibility check</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bot">
+      <p class="mono">&copy; 2026 Japa Agency &middot; Travels &amp; Tours. All rights reserved.</p>
+      <p class="mono">Registered in Nigeria &middot; RC placeholder</p>
+    </div>
+
+    <p class="footer__word" aria-hidden="true">JAPA AGENCY</p>
+  </div>
+</footer>
+
+<!-- ==========================================================================
+     MOBILE MENU — the header links, on narrow screens
+     ========================================================================== -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu__scrim" data-close></div>
+  <div class="menu__panel">
+    <nav class="menu__nav">
+      <a href="#services" data-close><svg class="i i--lg"><use href="#i-cap"/></svg> Services</a>
+      <a href="#process" data-close><svg class="i i--lg"><use href="#i-clock"/></svg> How it works</a>
+      <a href="#destinations" data-close><svg class="i i--lg"><use href="#i-globe"/></svg> Destinations</a>
+      <a href="#why" data-close><svg class="i i--lg"><use href="#i-shield"/></svg> Why us</a>
+      <a href="#stories" data-close><svg class="i i--lg"><use href="#i-quote"/></svg> Stories</a>
+      <a href="#check" data-close><svg class="i i--lg"><use href="#i-check-c"/></svg> Eligibility check</a>
+      <a href="#faq" data-close><svg class="i i--lg"><use href="#i-search"/></svg> FAQ</a>
+    </nav>
+    <a class="btn btn--fill btn--lg btn--block" href="#contact" data-close style="margin-top: var(--s-10)">
+      Book a free consultation
+    </a>
+  </div>
+</div>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

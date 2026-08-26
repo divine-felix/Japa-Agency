@@ -1,0 +1,227 @@
+/* ==========================================================================
+   MONOGLASS · WEB
+   --------------------------------------------------------------------------
+   The Monoglass design system (extracted from GateFi, authored in Flutter)
+   ported to CSS and extended with a light theme for Japa Agency.
+
+   What carried over unchanged:
+     · one ladder of surfaces, stacked — never arbitrary greys
+     · fills and borders are white-at-low-alpha, not lighter paint
+     · one bounded blur per surface, never nested
+     · small type, small icons, generous calm
+     · radii 10 / 14 / 20, blur sigma 22
+
+   What was added for the web:
+     · a light theme built on an azure ladder
+     · a single blue accent (dark mode keeps white as the loud accent,
+       blue does the quiet work)
+     · motion tokens, elevation, and a fluid type scale
+   ========================================================================== */
+
+:root {
+  /* ---- Shape --------------------------------------------------------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-2xl: 36px;
+  --r-pill: 999px;
+
+  /* ---- Blur ---------------------------------------------------------- */
+  --blur: 22px;          /* the Monoglass frosted-glass sigma */
+  --blur-heavy: 40px;
+  --blur-smoke: 90px;    /* the drifting background blooms */
+
+  /* ---- Spacing scale (Monoglass: 3·6·8·10·12·14·16·18·20·26) --------- */
+  --s-1: 3px;   --s-2: 6px;   --s-3: 8px;   --s-4: 10px;
+  --s-5: 12px;  --s-6: 14px;  --s-7: 16px;  --s-8: 18px;
+  --s-9: 20px;  --s-10: 26px; --s-11: 34px; --s-12: 44px;
+  --s-13: 56px; --s-14: 72px; --s-15: 96px; --s-16: 128px;
+
+  /* ---- Type families -------------------------------------------------
+     Helvetica Neue is the system's UI face and ships with macOS; Inter is
+     the fallback everywhere else. Menlo/JetBrains Mono carry data — the
+     monospace is meaningful, not decorative. Caveat is the hand.          */
+  --font-ui: "Helvetica Neue", "Inter", -apple-system, BlinkMacSystemFont,
+             "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Menlo", "JetBrains Mono", ui-monospace, SFMono-Regular,
+               Consolas, monospace;
+  --font-hand: "Caveat", "Bradley Hand", "Segoe Script", cursive;
+
+  /* ---- Type scale ----------------------------------------------------
+     Monoglass keeps UI text small (12–13.5px). A marketing site needs
+     display sizes too, so the scale grows upward but the *interface*
+     tokens stay exactly where the system put them.                       */
+  --t-eyebrow: 10.5px;
+  --t-mono: 11.5px;
+  --t-label: 12px;
+  --t-sub: 13px;
+  --t-name: 13.5px;
+  --t-body: 15px;
+  --t-lead: clamp(16px, 1.15vw + 12px, 19px);
+  --t-title: 19px;
+  --t-h4: clamp(18px, 1vw + 14px, 22px);
+  --t-h3: clamp(22px, 1.6vw + 16px, 30px);
+  --t-h2: clamp(26px, 2.4vw + 14px, 46px);
+  --t-h1: clamp(34px, 4.4vw + 12px, 74px);
+  --t-mega: clamp(52px, 11vw, 168px);
+
+  --lh-tight: 1.04;
+  --lh-snug: 1.18;
+  --lh-body: 1.62;
+
+  --tr-title: -0.04em;   /* Monoglass tracks its titles in, hard */
+  --tr-name: -0.01em;
+  --tr-eyebrow: 0.1em;
+
+  /* ---- Motion --------------------------------------------------------- */
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --dur-fast: 120ms;      /* Monoglass hover timing */
+  --dur: 260ms;
+  --dur-slow: 620ms;
+  --dur-reveal: 900ms;
+
+  /* ---- Layout --------------------------------------------------------- */
+  --wrap: 1240px;
+  --wrap-narrow: 860px;
+  --gutter: clamp(18px, 4vw, 56px);
+  --nav-h: 62px;
+}
+
+/* ==========================================================================
+   DARK — the native Monoglass room
+   --------------------------------------------------------------------------
+   Pure neutral blacks only. No tint mixed into the ladder: every step is
+   black lightened toward white, nothing else. White stays the loud accent;
+   blue is allowed to do the quiet work (links, focus, the one glow).
+   ========================================================================== */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* the ladder — black -> lifted black */
+  --ink-0:  #000000;   /* the void behind everything */
+  --ink-1:  #070707;   /* page base */
+  --ink-2:  #0C0C0C;   /* rail / nav */
+  --ink-3:  #121212;   /* panel */
+  --ink-4:  #191919;   /* raised / hover */
+  --ink-5:  #232323;   /* active / pressed */
+  --ink-6:  #2E2E2E;   /* top step, borders on solid fills */
+
+  --bg: var(--ink-1);
+  --bg-elevated: var(--ink-3);
+  --bg-sunken: var(--ink-0);
+
+  /* text */
+  --text: #ECECEC;
+  --text-dim: #8D8D93;
+  --text-faint: #5E5E64;
+  --text-invert: #000000;
+
+  /* accents */
+  --accent: #FFFFFF;              /* the one loud accent — inversion only */
+  --accent-ink: #000000;
+  --blue: #4C9BFF;
+  --blue-bright: #7FBAFF;
+  --blue-deep: #1B4FCC;
+  --blue-wash: rgba(76, 155, 255, .14);
+  --blue-glow: rgba(76, 155, 255, .38);
+
+  /* glass — white at low alpha, never lighter paint */
+  --glass: rgba(255, 255, 255, .05);
+  --glass-strong: rgba(255, 255, 255, .08);
+  --glass-hover: rgba(255, 255, 255, .07);
+  --hairline: rgba(255, 255, 255, .09);
+  --hairline-soft: rgba(255, 255, 255, .05);
+  --hairline-strong: rgba(255, 255, 255, .16);
+
+  /* the room: one soft darker pool, low-right (Monoglass rule) */
+  --pool: radial-gradient(circle at 62% 64%,
+            rgba(0,0,0,.66), rgba(0,0,0,.30) 45%, transparent 78%);
+
+  /* smoke blooms */
+  --smoke-a: rgba(76, 155, 255, .20);
+  --smoke-b: rgba(30, 70, 160, .18);
+  --smoke-c: rgba(255, 255, 255, .05);
+  --smoke-d: rgba(120, 180, 255, .12);
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.6);
+  --shadow: 0 12px 34px rgba(0,0,0,.62);
+  --shadow-lg: 0 34px 90px rgba(0,0,0,.72);
+  --shadow-glow: 0 0 60px rgba(76,155,255,.16);
+
+  --img-tint: brightness(.94) contrast(1.04);
+  --scrim: linear-gradient(180deg, transparent 28%, rgba(0,0,0,.82) 100%);
+}
+
+/* ==========================================================================
+   LIGHT — the azure room
+   --------------------------------------------------------------------------
+   Built on white with a light-blue ladder. The blue is an azure sitting near
+   480nm: on a white ground that band carries the highest perceived vividness
+   per unit of luminance contrast, so it reads as "catchy" without ever
+   getting loud. Everything else stays white, black and grey.
+   ========================================================================== */
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --paper-0: #FFFFFF;
+  --paper-1: #FBFCFE;
+  --paper-2: #F3F7FD;
+  --paper-3: #E8F1FC;
+  --paper-4: #D8E7FA;
+  --paper-5: #BFD8F6;
+
+  --ink-0: #FFFFFF;
+  --ink-1: var(--paper-1);
+  --ink-2: var(--paper-0);
+  --ink-3: var(--paper-0);
+  --ink-4: var(--paper-2);
+  --ink-5: var(--paper-3);
+  --ink-6: var(--paper-4);
+
+  --bg: var(--paper-1);
+  --bg-elevated: #FFFFFF;
+  --bg-sunken: var(--paper-2);
+
+  --text: #08090B;
+  --text-dim: #56585F;
+  --text-faint: #8B8F98;
+  --text-invert: #FFFFFF;
+
+  --accent: #08090B;              /* light mode inverts the inversion */
+  --accent-ink: #FFFFFF;
+  --blue: #1257F0;
+  --blue-bright: #4A8CFF;
+  --blue-deep: #0A3AB0;
+  --blue-wash: rgba(18, 87, 240, .08);
+  --blue-glow: rgba(18, 87, 240, .22);
+
+  --glass: rgba(255, 255, 255, .58);
+  --glass-strong: rgba(255, 255, 255, .78);
+  --glass-hover: rgba(255, 255, 255, .88);
+  --hairline: rgba(9, 24, 56, .10);
+  --hairline-soft: rgba(9, 24, 56, .06);
+  --hairline-strong: rgba(9, 24, 56, .18);
+
+  /* the room inverts: a bright pool, not a dark one */
+  --pool: radial-gradient(circle at 60% 8%,
+            rgba(180, 214, 255, .70), rgba(226, 239, 255, .40) 42%, transparent 74%);
+
+  --smoke-a: rgba(90, 160, 255, .42);
+  --smoke-b: rgba(150, 200, 255, .40);
+  --smoke-c: rgba(255, 255, 255, .78);
+  --smoke-d: rgba(60, 130, 245, .26);
+
+  --shadow-sm: 0 1px 2px rgba(12, 32, 72, .06);
+  --shadow: 0 14px 38px rgba(12, 32, 72, .10);
+  --shadow-lg: 0 36px 96px rgba(12, 32, 72, .14);
+  --shadow-glow: 0 0 70px rgba(18, 87, 240, .12);
+
+  --img-tint: saturate(1.04) contrast(1.02);
+  --scrim: linear-gradient(180deg, transparent 26%, rgba(4, 16, 44, .74) 100%);
+}
